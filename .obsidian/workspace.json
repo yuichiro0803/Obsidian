@@ -1,0 +1,268 @@
+{
+  "main": {
+    "id": "a8d5730bbc286c49",
+    "type": "split",
+    "children": [
+      {
+        "id": "d480b57c06e37b1e",
+        "type": "tabs",
+        "dimension": 66.33064516129032,
+        "children": [
+          {
+            "id": "d0afe1b4bb2e0c59",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Welcome.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Welcome"
+            }
+          },
+          {
+            "id": "42cbd51a90284f1f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "キャリア/現在地と進むべき道.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "現在地と進むべき道"
+            }
+          },
+          {
+            "id": "587762b623a58930",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新規タブ"
+            }
+          }
+        ],
+        "currentTab": 2
+      },
+      {
+        "id": "43afc9eade182570",
+        "type": "tabs",
+        "dimension": 33.66935483870967,
+        "children": [
+          {
+            "id": "12ebd8806119781c",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "グラフビュー"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "240ccd7345dd7fe4",
+    "type": "split",
+    "children": [
+      {
+        "id": "a4377b3ed5f1ad63",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "39812679e94bc593",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "ファイルエクスプローラ"
+            }
+          },
+          {
+            "id": "c925c51c1a565ef5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "cdceec9d7e0e4318",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "6bbbc2a718aafb2a",
+    "type": "split",
+    "children": [
+      {
+        "id": "d749348e864fc030",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7ea055af69f6d480",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "AIプロダクト/学びを大切にするAIプロダクト.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 学びを大切にするAIプロダクト"
+            }
+          },
+          {
+            "id": "72a382162db54a62",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "AIプロダクト/学びを大切にするAIプロダクト.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 学びを大切にするAIプロダクト"
+            }
+          },
+          {
+            "id": "e0a6ec841b4302ba",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "ab6cf955bc698dd9",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "dcf0d756c8a921f6",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "AIプロダクト/学びを大切にするAIプロダクト.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 学びを大切にするAIプロダクト"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:クイックスイッチャーを開く": false,
+      "graph:グラフビューを開く": false,
+      "canvas:新規キャンバスを作成": false,
+      "daily-notes:今日のデイリーノートを開く": false,
+      "templates:テンプレートを挿入": false,
+      "command-palette:コマンドパレットを開く": false,
+      "bases:新規ベースを作成": false
+    }
+  },
+  "active": "587762b623a58930",
+  "lastOpenFiles": [
+    "📁 Projects/📖 Docs/業務ヒアリング力の強化/🏫 Enablement/施策4_メンバー自律ヒアリングの定着.md",
+    "📁 Projects/📖 Docs/業務ヒアリング力の強化/🏫 Enablement/施策3_PBIテンプレートの実践運用.md",
+    "📁 Projects/📖 Docs/業務ヒアリング力の強化/🏫 Enablement/施策2_業務ヒアリング勉強会.md",
+    "📁 Projects/📖 Docs/業務ヒアリング力の強化/🏫 Enablement/施策1_ユーザーストーリーからヒアリング設計.md",
+    "📁 Projects/📖 Docs/業務ヒアリング力の強化/🏫 Enablement/README.md",
+    "📁 Projects/📖 Docs/業務ヒアリング力の強化/🏫 Enablement/業務ヒアリング勉強会_アジェンダ・資料構成.md",
+    "📁 Projects/📖 Docs/業務ヒアリング力の強化/🎯 Methodology/業務を正しく理解しドキュメント化したい.md",
+    "📁 Projects/📖 Docs/業務ヒアリング力の強化/🎯 Methodology/Salesforce導入支援におけるウォーターフォール開発での業務理解手法活用ガイド.md",
+    "📁 Projects/📖 Docs/業務ヒアリング力の強化/🏫 Enablement/システム開発における要件定義手法の体系化.md",
+    "📁 Projects/📖 Docs/業務ヒアリング力の強化/🏫 Enablement",
+    "📁 Projects/📖 Docs/業務ヒアリング力の強化/🎯 Methodology",
+    "📁 Projects/📖 Docs/業務ヒアリング力の強化",
+    "📁 Projects/📖 Docs/💎 Business_Analysis/🏫 Enablement/業務ヒアリング勉強会_アジェンダ・資料構成.md",
+    "📁 Projects/📖 Docs/💎 Business_Analysis/🏫 Enablement/システム開発における要件定義手法の体系化.md",
+    "📁 Projects/📖 Docs/💎 Business_Analysis/🎯 Methodology/業務を正しく理解しドキュメント化したい.md",
+    "📁 Projects/📖 Docs/💎 Business_Analysis/🎯 Methodology/Salesforce導入支援におけるウォーターフォール開発での業務理解手法活用ガイド.md",
+    "📁 Projects/📖 Docs/💎 Business_Analysis/🏫 Enablement",
+    "📁 Projects/📖 Docs/💎 Business_Analysis/🎯 Methodology",
+    "📁 Projects/📖 Docs/💎 Business_Analysis",
+    "🎯 Goals/2026/Q1/03_March/W12_0322-0331_テンプレート標準化.md",
+    "🎯 Goals/2026/Q1/03_March/W11_0315-0321_実践支援.md",
+    "🎯 Goals/2026/Q1/03_March/W10_0308-0314_チーム勉強会.md",
+    "🎯 Goals/2026/Q1/03_March/W09_0301-0307_W10準備.md",
+    "📁 Projects/📖 Docs/業務ヒアリング勉強会_アジェンダ・資料構成.md",
+    "🎯 Goals/2026/Q1/03_March/W12.md",
+    "🎯 Goals/2026/Q1/03_March/W11.md",
+    "🎯 Goals/2026/Q1/03_March/W10.md",
+    "📁 Projects/📝 Templates/🎯 Management/週間目標_テンプレート.md",
+    "📁 Projects/📝 Templates/🎯 Management/月間目標_テンプレート.md",
+    "📁 Projects/📝 Templates/🎯 Management/日記_テンプレート.md",
+    "📁 Projects/📝 Templates/🎯 Management/年間目標_テンプレート.md",
+    "📁 Projects/📝 Templates/🎯 Management/Q目標_テンプレート.md",
+    "📁 Projects/📝 Templates/🎯 Management",
+    "📁 Projects/📝 Templates/💻 Development",
+    "📅 Journal/2026/03",
+    "📅 Journal/2026"
+  ]
+}
