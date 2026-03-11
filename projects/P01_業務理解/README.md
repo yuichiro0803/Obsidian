@@ -1,5 +1,7 @@
 # 📊 P01｜業務理解
 
+🔗 [GitHub Project #8](https://github.com/yuichiro0803/Obsidian/projects/8)
+
 ## 概要
 
 Salesforce 導入支援プロジェクトにおける業務ドキュメント化の課題と、そのアプローチをまとめたプロジェクト。

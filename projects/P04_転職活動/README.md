@@ -1,6 +1,6 @@
 # 📊 P04｜転職活動
 
-🔗 [GitHub Project #5](https://github.com/users/yuichiro0803/projects/5)
+🔗 [GitHub Project #10](https://github.com/yuichiro0803/Obsidian/projects/10)
 
 ## 概要
 

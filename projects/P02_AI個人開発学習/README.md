@@ -1,6 +1,6 @@
 # 📊 P02｜AIを使って個人開発を勉強する方法
 
-🔗 [GitHub Project](https://github.com/users/yuichiro0803/projects/2)
+🔗 [GitHub Project #8](https://github.com/yuichiro0803/Obsidian/projects/8)
 
 ## 概要
 

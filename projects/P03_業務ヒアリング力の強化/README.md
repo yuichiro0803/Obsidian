@@ -1,6 +1,6 @@
 # 📊 P03｜業務ヒアリング力の強化
 
-🔗 GitHub Project（後で追加）
+🔗 [GitHub Project #9](https://github.com/yuichiro0803/Obsidian/projects/9)
 
 ## 概要
 
