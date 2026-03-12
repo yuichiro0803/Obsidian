@@ -15,7 +15,7 @@ AntigravityというAIエージェントを使ってApexを学習する方法を
 | Issue | タイトル | 成果物フォルダ | 状態 |
 |-------|---------|-------------|------|
 | [#2](https://github.com/yuichiro0803/Obsidian/issues/2) | 【LT構成】LTのターゲット・目的・スライド構成案を決める | [issue-2_LT構成/](./issue-2_LT構成/) | ✅ Done |
-| [#3](https://github.com/yuichiro0803/Obsidian/issues/3) | 【LTデモ】Antigravity × Apex のデモシナリオを設計・準備する | [issue-3_LTデモ/](./issue-3_LTデモ/) | ⬜ Todo |
+| [#3](https://github.com/yuichiro0803/Obsidian/issues/3) | 【LTデモ】Antigravity × Apex のデモシナリオを設計・準備する | [issue-3_LTデモ/](./issue-3_LTデモ/) | 🔄 In Progress |
 | [#4](https://github.com/yuichiro0803/Obsidian/issues/4) | 【LTスライド】発表スライドを作成する | [issue-4_LTスライド/](./issue-4_LTスライド/) | ⬜ Todo |
 
 ## 最終成果物
