@@ -1,6 +1,6 @@
 # 📊 P05｜プロジェクト管理におけるAI活用術
 
-🔗 [GitHub Project #11](https://github.com/yuichiro0803/Obsidian/projects/11)
+🔗 [GitHub Project #11](https://github.com/users/yuichiro0803/projects/11)
 
 ## 概要
 

@@ -1,6 +1,6 @@
 # 📊 P01｜業務理解
 
-🔗 [GitHub Project #8](https://github.com/yuichiro0803/Obsidian/projects/8)
+🔗 [GitHub Project #7](https://github.com/users/yuichiro0803/projects/7)
 
 ## 概要
 
