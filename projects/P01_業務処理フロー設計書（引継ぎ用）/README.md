@@ -1,6 +1,6 @@
 # 📊 P01｜業務理解
 
-🔗 [GitHub Project #7](https://github.com/users/yuichiro0803/projects/7)
+🔗 [GitHub Project #7](https://github.com/users/yuichiro0803/projects/7) ／ 📋 [実行計画書・ゴール定義](./実行計画書_ゴール定義.md)
 
 ## 概要
 

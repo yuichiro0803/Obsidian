@@ -1,6 +1,6 @@
 # 📊 P02｜AIを使って個人開発を勉強する方法
 
-🔗 [GitHub Project #8](https://github.com/users/yuichiro0803/projects/8)
+🔗 [GitHub Project #8](https://github.com/users/yuichiro0803/projects/8) ／ 📋 [実行計画書・ゴール定義](./実行計画書_ゴール定義.md)
 
 ## 概要
 

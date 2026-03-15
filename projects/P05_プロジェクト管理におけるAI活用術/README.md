@@ -1,6 +1,6 @@
 # 📊 P05｜プロジェクト管理におけるAI活用術
 
-🔗 [GitHub Project #11](https://github.com/users/yuichiro0803/projects/11)
+🔗 [GitHub Project #11](https://github.com/users/yuichiro0803/projects/11) ／ 📋 [実行計画書・ゴール定義](./実行計画書_ゴール定義.md)
 
 ## 概要
 
