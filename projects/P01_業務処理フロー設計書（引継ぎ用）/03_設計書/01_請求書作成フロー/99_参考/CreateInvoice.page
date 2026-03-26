@@ -1,0 +1,512 @@
+<apex:page controller="CreateInvoiceController" action="{!doInitAction}" showHeader="false" sidebar="false">
+  <apex:slds />
+  <head>
+    <script type="text/javascript">
+      // 新規請求書明細選択ボタン
+      function createInvoiceBtnComplete(){
+        var a = document.getElementsByClassName("selectInvoiceList");
+        for(var i = 0; i < a.length; i++) {
+          a[i].style.display = "block";
+        }
+        var b = document.getElementsByClassName("createInvoiceBtn");
+        for(var i = 0; i < b.length; i++) {
+          b[i].style.display = "none";
+        }
+        var c = document.getElementsByClassName("selectedInvoiceList");
+        for(var i = 0; i < b.length; i++) {
+          c[i].style.display = "none";
+        }
+        var d = document.getElementsByClassName("selectInvoiceSaveBtn");
+        for(var i = 0; i < d.length; i++) {
+          d[i].style.display = "block";
+        }
+        var e = document.getElementsByClassName("selectInvoiceBackBtn");
+        for(var i = 0; i < e.length; i++) {
+          e[i].style.display = "block";
+        }
+      }
+      // 編集リンク（作成済）
+      function editCreatedInvoiceBtnComplete(){
+        var a = document.getElementsByClassName("selectInvoiceList");
+        for(var i = 0; i < a.length; i++) {
+          a[i].style.display = "block";
+        }
+        var b = document.getElementsByClassName("createInvoiceBtn");
+        for(var i = 0; i < b.length; i++) {
+          b[i].style.display = "none";
+        }
+        var c = document.getElementsByClassName("selectedInvoiceList");
+        for(var i = 0; i < b.length; i++) {
+          c[i].style.display = "none";
+        }
+        var d = document.getElementsByClassName("selectInvoiceCreatedSaveBtn");
+        for(var i = 0; i < d.length; i++) {
+          d[i].style.display = "block";
+        }
+        var e = document.getElementsByClassName("selectInvoiceCreatedBackBtn");
+        for(var i = 0; i < e.length; i++) {
+          e[i].style.display = "block";
+        }
+      }
+      // 編集リンク
+      function editInvoiceBtnComplete(){
+        var a = document.getElementsByClassName("selectInvoiceList");
+        for(var i = 0; i < a.length; i++) {
+          a[i].style.display = "block";
+        }
+        var b = document.getElementsByClassName("createInvoiceBtn");
+        for(var i = 0; i < b.length; i++) {
+          b[i].style.display = "none";
+        }
+        var c = document.getElementsByClassName("selectedInvoiceList");
+        for(var i = 0; i < b.length; i++) {
+          c[i].style.display = "none";
+        }
+        var d = document.getElementsByClassName("selectInvoiceEditSaveBtn");
+        for(var i = 0; i < d.length; i++) {
+          d[i].style.display = "block";
+        }
+        var e = document.getElementsByClassName("selectInvoiceEditBackBtn");
+        for(var i = 0; i < e.length; i++) {
+          e[i].style.display = "block";
+        }
+      }
+      // 新規明細作成の保存・戻るボタン押下時の画面遷移
+      function selectInvoiceSaveBtnComplete(){
+        var a = document.getElementsByClassName("selectInvoiceList");
+        for(var i = 0; i < a.length; i++) {
+          a[i].style.display = "none";
+        }
+        var b = document.getElementsByClassName("createInvoiceBtn");
+        for(var i = 0; i < b.length; i++) {
+          b[i].style.display = "block";
+        }
+        var c = document.getElementsByClassName("selectedInvoiceList");
+        for(var i = 0; i < b.length; i++) {
+          c[i].style.display = "block";
+        }
+        var d = document.getElementsByClassName("selectInvoiceSaveBtn");
+        for(var i = 0; i < d.length; i++) {
+          d[i].style.display = "none";
+        }
+        var e = document.getElementsByClassName("selectInvoiceBackBtn");
+        for(var i = 0; i < e.length; i++) {
+          e[i].style.display = "none";
+        }
+      }
+      // 作成前明細の商品追加の保存・戻るボタン押下時の画面遷移
+      function selectInvoiceEditSaveBtnComplete(){
+        var a = document.getElementsByClassName("selectInvoiceList");
+        for(var i = 0; i < a.length; i++) {
+          a[i].style.display = "none";
+        }
+        var b = document.getElementsByClassName("createInvoiceBtn");
+        for(var i = 0; i < b.length; i++) {
+          b[i].style.display = "block";
+        }
+        var c = document.getElementsByClassName("selectedInvoiceList");
+        for(var i = 0; i < b.length; i++) {
+          c[i].style.display = "block";
+        }
+        var d = document.getElementsByClassName("selectInvoiceEditSaveBtn");
+        for(var i = 0; i < d.length; i++) {
+          d[i].style.display = "none";
+        }
+        var e = document.getElementsByClassName("selectInvoiceEditBackBtn");
+        for(var i = 0; i < e.length; i++) {
+          e[i].style.display = "none";
+        }
+      }
+      // 作成済み明細の商品追加の保存・戻るボタン押下時の画面遷移
+      function selectCreatedInvoiceEditSaveBtnComplete(){
+        var a = document.getElementsByClassName("selectInvoiceList");
+        for(var i = 0; i < a.length; i++) {
+          a[i].style.display = "none";
+        }
+        var b = document.getElementsByClassName("createInvoiceBtn");
+        for(var i = 0; i < b.length; i++) {
+          b[i].style.display = "block";
+        }
+        var c = document.getElementsByClassName("selectedInvoiceList");
+        for(var i = 0; i < b.length; i++) {
+          c[i].style.display = "block";
+        }
+        var d = document.getElementsByClassName("selectInvoiceCreatedSaveBtn");
+        for(var i = 0; i < d.length; i++) {
+          d[i].style.display = "none";
+        }
+        var e = document.getElementsByClassName("selectInvoiceCreatedBackBtn");
+        for(var i = 0; i < e.length; i++) {
+          e[i].style.display = "none";
+        }
+      }
+      // 新規請求書作成ボタン
+      // 作成済み請求明細更新ボタン
+      // (どちらも共通の処理)
+      function saveInvoiceBtnComplete(){
+        var a = document.getElementsByClassName("selectInvoiceList");
+        for(var i = 0; i < a.length; i++) {
+          a[i].style.display = "none";
+        }
+        var b = document.getElementsByClassName("createInvoiceBtn");
+        for(var i = 0; i < b.length; i++) {
+          b[i].style.display = "none";
+        }
+        var c = document.getElementsByClassName("selectedInvoiceList");
+        for(var i = 0; i < c.length; i++) {
+          c[i].style.display = "none";
+        }
+        var d = document.getElementsByClassName("completeText");
+        for(var i = 0; i < d.length; i++) {
+          d[i].style.display = "block";
+        }
+        var e = document.getElementsByClassName("selectInvoiceBackBtn");
+        for(var i = 0; i < e.length; i++) {
+          e[i].style.display = "none";
+        }
+        var f = document.getElementsByClassName("selectInvoiceEditBackBtn");
+        for(var i = 0; i < f.length; i++) {
+          f[i].style.display = "none";
+        }
+        var g = document.getElementsByClassName("selectInvoiceCreatedBackBtn");
+        for(var i = 0; i < g.length; i++) {
+          g[i].style.display = "none";
+        }
+      }
+      // 再申請リンク(チェック)
+      function invoiceReapplyActionCheck(countAfter){
+        if(confirm("キャンセルを行います。よろしいですか？\nキャンセルを実行する場合は「OK」をクリックしてください。")){
+          // ステータスの文字列を取得
+          var status = document.getElementsByClassName("status" + countAfter)[0];
+          // 送信済なら却下、それ以外ならキャンセルを設定する
+          if(status.textContent == "送信済"){
+            status.textContent = "却下";
+          } else {
+            status.textContent = "キャンセル";
+          }
+          // 押下後のリンクを非表示にする
+          var cancelLink = document.getElementsByClassName("ReapplyCancel" + countAfter)[0];
+          cancelLink.style.display = "none";
+
+          return true;
+
+        } else {
+          return false;
+        }
+      }
+      // 再申請リンク(後続)
+      function invoiceReapply(){
+        window.alert("キャンセルを行いました。");
+      }
+      // 請求先入力チェック
+      function checkBillingOffice(){
+        var selectBilling = getElementsByClassName("BillingOffice").item(0).value;
+
+        if(selectBilling == ""){
+          window.alert("請求先を選択してください");
+
+          return false;
+        } else {
+
+          return true;
+        }
+      }
+      // 請求先初期値設定
+      function setBillingOffice(office){
+        getElementsByClassName("BillingOffice").item(0).value = office;
+
+        return true;
+      }
+    </script>
+  </head>
+  <style type="text/css">
+    .selectInvoiceList {
+        display: none; 
+    }
+    .selectInvoiceSaveBtn {
+        display: none; 
+    }
+    .selectInvoiceEditSaveBtn {
+        display: none; 
+    }
+    .selectInvoiceCreatedSaveBtn {
+        display: none; 
+    }
+    .completeText {
+      display: none;
+    }
+    .selectInvoiceBackBtn {
+      display: none;
+      margin-top: 10px;
+    }
+    .selectInvoiceEditBackBtn {
+      display: none;
+      margin-top: 10px;
+    }
+    .selectInvoiceCreatedBackBtn {
+      display: none;
+      margin-top: 10px;
+    }
+  </style>
+  
+
+  <apex:form style="margin:30px">
+    <!--  -->
+    <p style="font-size:20px">商談名：{!productName}</p>
+    <!-- 請求書作成画面 -->
+    <div class="selectedInvoiceList">
+      <!-- 作成前請求明細 -->
+      <apex:pageBlock id="selectedInvoiceListTable" title="未作成請求明細">
+      <div class="createInvoiceBtn">
+        <apex:commandButton action="{!getSalesLineItemList}" value="①請求明細を選択" onclick="if(!setBillingOffice('')){return false}" oncomplete="createInvoiceBtnComplete()" styleClass="slds-button slds-button_brand"  reRender="selectInvoiceListTable"/>
+      </div>
+        <apex:variable value="{!0}" var="countBefore"/>
+        <apex:pageBlockTable value="{!invoiceDetailObjectMaster}" var="m" styleClass="slds-table slds-table_cell-buffer slds-table_bordered">
+          <apex:column rowspan="{!m.rowSpan}" rendered="{!m.rendered}">
+            <apex:facet name="header"></apex:facet>
+            <apex:commandLink value="商品追加" action="{!editSelectInvoice}" onclick="if(!setBillingOffice('{!m.BillingOffice}')){return false}" oncomplete="editInvoiceBtnComplete()" reRender="selectInvoiceListTable">
+              <apex:param name="numberSelect" value="{!countBefore}" />
+            </apex:commandLink>
+          </apex:column>
+          <apex:column rowspan="{!m.rowSpan}" rendered="{!m.rendered}">
+            <apex:facet name="header">（仮）参照番号</apex:facet>
+            <apex:outputText value="{!m.relationInvoiceHeaderNumber }" />
+          </apex:column>
+          <apex:column >
+            <apex:facet name="header">商品名</apex:facet>
+            <apex:outputText value="{!m.Product2Name }" />
+            <!-- 結合しない行で番号をカウント -->
+            <apex:variable value="{!countBefore + 1}" var="countBefore"/>
+          </apex:column>
+          <apex:column >
+            <apex:facet name="header">請求書表示名</apex:facet>
+            <apex:outputText value="{!m.InvoiceDisplayName }" />
+          </apex:column>
+          <apex:column >
+            <apex:facet name="header">商品詳細</apex:facet>
+            <apex:outputText value="{!m.Product2Detail }" />
+          </apex:column>
+          <apex:column rowspan="{!m.rowSpan}" rendered="{!m.rendered}">
+            <apex:facet name="header">請求先</apex:facet>
+            <apex:outputText value="{!m.CustomerName }" />
+          </apex:column>
+          <apex:column >
+            <apex:facet name="header">計上年月</apex:facet>
+            <apex:outputText value="{!m.RecordingMonth }" />
+          </apex:column>
+          <apex:column >
+            <apex:facet name="header">計上金額</apex:facet>
+            <apex:outputText value="{0, number, ###,###,##0 }">
+              <apex:param value="{!m.RecordingPriceTotal }"/>
+            </apex:outputText>
+          </apex:column>
+          <!-- <apex:column >
+            <apex:facet name="header">明細摘要</apex:facet>
+            <apex:outputText value="{!m.record.DetailDescription__c }" />
+          </apex:column>
+          <apex:column >
+            <apex:facet name="header">商談担当者</apex:facet>
+            <apex:outputText value="{!m.record.SalesLineItem__r.OpportunityId__r.Owner.Name }" />
+          </apex:column> -->
+        </apex:pageBlockTable>
+
+      <apex:actionStatus Id="status">
+        <apex:facet name="start">
+          <apex:commandButton value="②請求書作成に進む"  styleClass="slds-button slds-button_brand" disabled="true"/>
+          <img id="status" src="/img/loading.gif" alt="Loading..."/>
+        </apex:facet>
+        <apex:facet name="stop">
+          <apex:commandButton action="{!saveInvoice}" value="②請求書作成に進む" status="status" oncomplete="saveInvoiceBtnComplete()" styleClass="slds-button slds-button_brand" rerender="result"/>
+        </apex:facet>
+      </apex:actionStatus>
+      <apex:outputPanel Id="result">
+      </apex:outputPanel>
+      </apex:pageBlock>
+      
+      <!-- 作成済み請求明細 -->
+      <apex:pageBlock id="createdInvoiceListTable" title="作成済み請求明細">
+        <apex:variable value="{!0}" var="countAfter"/>
+        <apex:pageBlockTable value="{!invoiceDetailObjectCreated}" var="m" styleClass="slds-table slds-table_cell-buffer slds-table_bordered">
+          <apex:column rowspan="{!m.rowSpan}" rendered="{!m.rendered}">
+            <apex:facet name="header"></apex:facet>
+            <!-- <apex:outputPanel styleClass="ReapplyCancel{!countAfter+1}" rendered="{!IF(m.record.InvoiceHeader__r.Status__c = '作成中' || m.record.InvoiceHeader__r.Status__c = '確定済（未送信）' || m.record.InvoiceHeader__r.Status__c = '送信済' || m.record.InvoiceHeader__r.Status__c = '送信エラー',true,false)}"> -->
+            <apex:outputPanel styleClass="ReapplyCancel{!countAfter+1}" rendered="{!IF(m.record.InvoiceHeader__r.Status__c = '作成中', true, false)}">
+              <apex:commandLink value="次へ" action="{!clickFlowOpen}" >
+                <apex:param name="numberCreated" value="{!countAfter}" />
+              </apex:commandLink>
+            </apex:outputPanel>
+          </apex:column>
+          <apex:column rowspan="{!m.rowSpan}" rendered="{!m.rendered}">
+            <apex:facet name="header">参照番号</apex:facet>
+            <!-- <apex:outputText value="{!m.record.InvoiceHeader__r.Name }" /> -->
+            <apex:outputText value="{!m.relationInvoiceHeaderNumber }" />
+          </apex:column>
+          <apex:column >
+            <apex:facet name="header">商品名</apex:facet>
+            <apex:outputText value="{!m.Product2Name }" />
+          </apex:column>
+          <apex:column >
+            <apex:facet name="header">請求書表示名</apex:facet>
+            <apex:outputText value="{!m.InvoiceDisplayName }" />
+          </apex:column>
+          <apex:column >
+            <apex:facet name="header">商品詳細</apex:facet>
+            <apex:outputText value="{!m.Product2Detail }" />
+          </apex:column>
+          <apex:column rowspan="{!m.rowSpan}" rendered="{!m.rendered}">
+            <apex:facet name="header">請求先</apex:facet>
+            <apex:outputText value="{!m.CustomerName }" />
+          </apex:column>
+          <apex:column >
+            <apex:facet name="header">計上年月</apex:facet>
+            <apex:outputText value="{!m.RecordingMonth }" />
+          </apex:column>
+          <apex:column >
+            <apex:facet name="header">計上金額</apex:facet>
+            <apex:outputText value="{0, number, ###,###,##0 }">
+              <apex:param value="{!m.RecordingPriceTotal }"/>
+            </apex:outputText>
+          </apex:column>
+          <apex:column >
+            <apex:facet name="header">明細摘要</apex:facet>
+            <apex:outputText value="{!m.record.DetailDescription__c }" />
+          </apex:column>
+          <apex:column >
+            <apex:facet name="header">商談担当者</apex:facet>
+            <apex:outputText value="{!m.record.SalesLineItem__r.OpportunityId__r.Owner.Name }" />
+          </apex:column>
+          <apex:column >
+            <apex:facet name="header">作成者</apex:facet>
+            <apex:outputText value="{!m.record.SalesLineItem__r.CreatedBy.Name }" />
+          </apex:column>
+          <apex:column rowspan="{!m.rowSpan}" rendered="{!m.rendered}">
+            <apex:facet name="header">ステータス</apex:facet>
+            <apex:outputText styleClass="status{!countAfter}" value="{!m.record.InvoiceHeader__r.Status__c }" />
+          </apex:column>
+          <apex:column rowspan="{!m.rowSpan}" rendered="{!m.rendered}">
+            <apex:facet name="header">キャンセル</apex:facet>
+            <apex:outputPanel styleClass="ReapplyCancel{!countAfter}" rendered="{!IF(m.record.InvoiceHeader__r.Status__c = '作成中' || m.record.InvoiceHeader__r.Status__c = '確定済（未送信）' || m.record.InvoiceHeader__r.Status__c = '送信済' || m.record.InvoiceHeader__r.Status__c = '送信エラー',true,false)}">
+              <apex:commandLink value="キャンセル" action="{!invoiceReapply}" onclick="if(!invoiceReapplyActionCheck('{!countAfter}')){return false}" oncomplete="invoiceReapply()" >
+                <apex:param name="numberReapply" value="{!countAfter}" />
+              </apex:commandLink>
+            </apex:outputPanel>
+          </apex:column>
+          <!-- 20230825.作成済み明細に商品追加を運用的に不可にするため一時的にコメントアウト -->
+          <!-- 202309以降に、処理内容の検討、改修を実施する -->
+          <apex:column rowspan="{!m.rowSpan}" rendered="{!m.rendered}">
+            <apex:facet name="header">商品追加</apex:facet>
+            <apex:outputPanel styleClass="ReapplyCancel{!countAfter+1}" rendered="{!IF(m.record.InvoiceHeader__r.Status__c = '作成中', true, false)}">
+              <apex:commandLink value="商品追加" action="{!editCreatedInvoice}" onclick="if(!setBillingOffice('{!m.BillingOffice}')){return false}"  oncomplete="editCreatedInvoiceBtnComplete()" reRender="selectInvoiceListTable">
+                <apex:param name="numberCreated" value="{!countAfter}" />
+              </apex:commandLink>
+            </apex:outputPanel>
+          </apex:column>
+          <apex:column style="display: none;">
+            <!-- 行数のカウントアップ用の行 -->
+            <apex:variable value="{!countAfter + 1}" var="countAfter"/>
+          </apex:column>
+        </apex:pageBlockTable>
+      <!-- 20230825.作成済み明細から商品追加を運用的に不可にするため、一時的にコメントアウト -->
+      <!-- 202309以降に、商品追加の処理内容を検討、改修を実施する -->
+      <apex:actionStatus Id="saveToCreatedButtonStatus">
+        <apex:facet name="start">
+          <apex:commandButton action="{!saveInvoice}" value="商品追加を反映する" styleClass="slds-button slds-button_brand" disabled="true"/>
+          <img id="status" src="/img/loading.gif" alt="Loading..."/>
+        </apex:facet>
+        <apex:facet name="stop">
+          <apex:commandButton action="{!saveInvoice}" value="商品追加を反映する" status="saveToCreatedButtonStatus" oncomplete="saveInvoiceBtnComplete()" styleClass="slds-button slds-button_brand" rerender="saveToCreatedResult"/>
+        </apex:facet>
+      </apex:actionStatus>
+      <apex:outputPanel Id="saveToCreatedResult">
+      </apex:outputPanel>
+    </apex:pageBlock>
+    </div>
+    <!-- 売上選択画面 -->
+    <div class="selectInvoiceList" Id="selectInvoiceList" >
+      <apex:pageBlock id="selectInvoiceListTable">
+        <apex:pageBlockTable value="{!salesLineItemObjectSelects}" var="h" styleClass="slds-table slds-table_cell-buffer slds-table_bordered" width="80%">
+          <apex:column >
+              <apex:facet name="header">選択</apex:facet>
+              <apex:inputCheckbox value="{!h.selected }"/>
+          </apex:column>
+          <apex:column >
+              <apex:facet name="header">商品名</apex:facet>
+              <apex:outputText value="{!h.Record.Product2Id__r.Name }" />
+          </apex:column>
+          <apex:column >
+              <apex:facet name="header">請求書表示名</apex:facet>
+              <apex:outputText value="{!h.Record.InvoiceDisplayName__c }" />
+          </apex:column>
+          <apex:column >
+              <apex:facet name="header">商品詳細</apex:facet>
+              <apex:outputText value="{!h.Record.Product2Detail__c }" />
+          </apex:column>
+          <apex:column >
+              <apex:facet name="header">商品詳細3</apex:facet>
+              <apex:outputText value="{!h.Record.Product2Detail3__c }" />
+          </apex:column>
+          <apex:column >
+              <apex:facet name="header">商品詳細4</apex:facet>
+              <apex:outputText value="{!h.Record.Product2Detail4__c }" />
+          </apex:column>
+          <apex:column >
+              <apex:facet name="header">単価</apex:facet>
+              <apex:outputText value="{!h.Record.UnitPrice__c }" />
+          </apex:column>
+          <apex:column >
+              <apex:facet name="header">数量</apex:facet>
+              <apex:outputText value="{!h.Record.Quantity__c }" />
+          </apex:column>
+          <apex:column >
+              <apex:facet name="header">計上金額</apex:facet>
+              <apex:outputText value="{0, number, ###,###,##0 }" >
+                <apex:param value="{!h.Record.RecordingPriceTotal__c }"/>
+              </apex:outputText>
+          </apex:column>
+          <apex:column >
+              <apex:facet name="header">計上年月</apex:facet>
+              <apex:outputText value="{!h.recordingMonth }" />
+          </apex:column>
+          <apex:column >
+              <apex:facet name="header">作成者</apex:facet>
+              <apex:outputText value="{!h.Record.CreatedBy.Name }" />
+          </apex:column>
+        </apex:pageBlockTable>
+      </apex:pageBlock>
+      請求先情報<apex:inputField styleclass="BillingOffice" value="{!item.BillingOffice__c}" />
+    </div>
+    <div class="selectInvoiceSaveBtn">  
+      <!-- 新規作成明細の保存 -->
+      <apex:commandButton action="{!selectInvoiceSave}" value="保存" onclick="if(!checkBillingOffice()){return false}" oncomplete="selectInvoiceSaveBtnComplete()" styleClass="slds-button slds-button_brand" reRender="selectedInvoiceListTable"/>
+    </div>
+    <div class="selectInvoiceEditSaveBtn">
+      <!-- 新規作成明細の商品追加の保存 -->
+      <apex:commandButton action="{!selectInvoiceSaveToEdit}" value="保存" onclick="if(!checkBillingOffice()){return false}" oncomplete="selectInvoiceEditSaveBtnComplete()" styleClass="slds-button slds-button_brand" reRender="selectedInvoiceListTable"/>
+    </div>
+    <div class="selectInvoiceCreatedSaveBtn">
+      <!-- 作成済み明細の商品追加の保存 -->
+      <apex:commandButton action="{!selectInvoiceSaveToCreated}" value="保存" onclick="if(!checkBillingOffice()){return false}" oncomplete="selectCreatedInvoiceEditSaveBtnComplete()" styleClass="slds-button slds-button_brand" reRender="createdInvoiceListTable"/>
+    </div>
+    <div class="selectInvoiceBackBtn">
+      <!-- 新規作成明細の戻るボタン -->
+      <apex:commandButton value="戻る" action="{!backToInvoiceListTable}" onclick="selectInvoiceSaveBtnComplete()" styleClass="slds-button slds-button_neutral"/> 
+    </div>
+    <div class="selectInvoiceEditBackBtn">
+      <!-- 作成前明細の商品追加の戻るボタン -->
+      <apex:commandButton value="戻る" action="{!backToInvoiceListTable}" onclick="selectInvoiceEditSaveBtnComplete()" styleClass="slds-button slds-button_neutral"/> 
+    </div>
+    <div class="selectInvoiceCreatedBackBtn">
+      <!-- 作成済み明細の商品追加の戻るボタン -->
+      <apex:commandButton value="戻る" action="{!backToInvoiceListTable}" onclick="selectCreatedInvoiceEditSaveBtnComplete()" styleClass="slds-button slds-button_neutral"/> 
+    </div>
+    <!-- <div class="completeText">
+      <p>作成しました</p>
+      <p><a onclick="window.location.reload(true);">戻る</a></p>
+    </div> -->
+    <div class="completeText">
+      <p>作成しました</p>
+      <apex:commandLink value="戻る" action="{!returnCreateInvoice}"/>
+    </div>
+    
+  </apex:form>
+</apex:page>
