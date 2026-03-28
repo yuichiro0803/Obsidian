@@ -9,7 +9,7 @@
 プロジェクト管理は大きく以下のフェーズに分類されます。
 
 ### 1-1. 立ち上げ・計画（Planning）
-> 🔗 [詳細：01_立ち上げ・計画/Planning深掘り.md](file:///Users/yuichiromuta/Desktop/Obsidian/projects/P05_%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E7%AE%A1%E7%90%86%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BAI%E6%B4%BB%E7%94%A8%E8%A1%93/issue-10_%E6%B4%BB%E7%94%A8%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E8%AA%BF%E6%9F%BB/01_%E7%AB%8B%E3%81%A1%E4%B8%8A%E3%81%92%E3%83%BB%E8%A8%88%E7%94%BB/Planning%E6%B7%B1%E6%8E%98%E3%82%8A.md)
+> 🔗 [詳細：01_立ち上げ・計画/Planning深掘り.md](file:///Users/yuichiromuta/Desktop/Obsidian/projects/03_AI%E8%87%AA%E5%8B%95%E5%8C%96%E3%83%BB%E7%94%9F%E7%94%A3%E6%80%A7%E5%90%91%E4%B8%8A/P05_%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E7%AE%A1%E7%90%86%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BAI%E6%B4%BB%E7%94%A8%E8%A1%93/issue-10_%E6%B4%BB%E7%94%A8%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E8%AA%BF%E6%9F%BB/01_%E7%AB%8B%E3%81%A1%E4%B8%8A%E3%81%92%E3%83%BB%E8%A8%88%E7%94%BB/Planning%E6%B7%B1%E6%8E%98%E3%82%8A.md)
 
 - **事前準備・情報収集**: プロジェクト本格稼働前に、業界知識や業務内容などの前提知識を効率よくキャッチアップする。
 - **要求定義**: ステークホルダーの「何を実現したいか（Why/What）」を整理・言語化する。
@@ -20,21 +20,21 @@
 - **リスク管理計画**: 想定されるリスク（技術的、人的、外部要因）を洗い出し、対応策（回避・軽減策）を事前に策定する。
 
 ### 1-2. 実行・推進（Execution）
-> 🔗 [詳細：02_実行・推進/Execution深掘り.md](file:///Users/yuichiromuta/Desktop/Obsidian/projects/P05_%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E7%AE%A1%E7%90%86%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BAI%E6%B4%BB%E7%94%A8%E8%A1%93/issue-10_%E6%B4%BB%E7%94%A8%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E8%AA%BF%E6%9F%BB/02_%E5%AE%9F%E8%A1%8C%E3%83%BB%E6%8E%A8%E9%80%B2/Execution%E6%B7%B1%E6%8E%98%E3%82%8A.md)
+> 🔗 [詳細：02_実行・推進/Execution深掘り.md](file:///Users/yuichiromuta/Desktop/Obsidian/projects/03_AI%E8%87%AA%E5%8B%95%E5%8C%96%E3%83%BB%E7%94%9F%E7%94%A3%E6%80%A7%E5%90%91%E4%B8%8A/P05_%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E7%AE%A1%E7%90%86%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BAI%E6%B4%BB%E7%94%A8%E8%A1%93/issue-10_%E6%B4%BB%E7%94%A8%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E8%AA%BF%E6%9F%BB/02_%E5%AE%9F%E8%A1%8C%E3%83%BB%E6%8E%A8%E9%80%B2/Execution%E6%B7%B1%E6%8E%98%E3%82%8A.md)
 
 - **チームビルディング・コミュニケーション**: メンバーの士気維持、期待値調整、円滑な情報共有の場を作る。
 - **会議のファシリテーション**: 定例会や課題解決会議の進行、議事録の作成。
 - **ステークホルダー調整**: 顧客や関連部署との折衝、仕様変更の交渉。
 
 ### 1-3. 監視・コントロール（Monitoring & Controlling）
-> 🔗 [詳細：03_監視・コントロール/Monitoring深掘り.md](file:///Users/yuichiromuta/Desktop/Obsidian/projects/P05_%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E7%AE%A1%E7%90%86%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BAI%E6%B4%BB%E7%94%A8%E8%A1%93/issue-10_%E6%B4%BB%E7%94%A8%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E8%AA%BF%E6%9F%BB/03_%E7%9B%A3%E8%A6%96%E3%83%BB%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB/Monitoring%E6%B7%B1%E6%8E%98%E3%82%8A.md)
+> 🔗 [詳細：03_監視・コントロール/Monitoring深掘り.md](file:///Users/yuichiromuta/Desktop/Obsidian/projects/03_AI%E8%87%AA%E5%8B%95%E5%8C%96%E3%83%BB%E7%94%9F%E7%94%A3%E6%80%A7%E5%90%91%E4%B8%8A/P05_%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E7%AE%A1%E7%90%86%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BAI%E6%B4%BB%E7%94%A8%E8%A1%93/issue-10_%E6%B4%BB%E7%94%A8%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E8%AA%BF%E6%9F%BB/03_%E7%9B%A3%E8%A6%96%E3%83%BB%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB/Monitoring%E6%B7%B1%E6%8E%98%E3%82%8A.md)
 
 - **進捗管理**: 計画と実績の予実差分を確認し、遅延があればリカバリプランを立てる。
 - **課題（インシデント）管理**: 発生した課題のトリアージ、担当者アサイン、解決までのトラッキング。
 - **品質管理**: 成果物が要求事項を満たしているかのレビュー、テスト結果の分析。
 
 ### 1-4. 終結（Closing）
-> 🔗 [詳細：04_終結/Closing深掘り.md](file:///Users/yuichiromuta/Desktop/Obsidian/projects/P05_%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E7%AE%A1%E7%90%86%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BAI%E6%B4%BB%E7%94%A8%E8%A1%93/issue-10_%E6%B4%BB%E7%94%A8%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E8%AA%BF%E6%9F%BB/04_%E7%B5%82%E7%B5%90/Closing%E6%B7%B1%E6%8E%98%E3%82%8A.md)
+> 🔗 [詳細：04_終結/Closing深掘り.md](file:///Users/yuichiromuta/Desktop/Obsidian/projects/03_AI%E8%87%AA%E5%8B%95%E5%8C%96%E3%83%BB%E7%94%9F%E7%94%A3%E6%80%A7%E5%90%91%E4%B8%8A/P05_%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E7%AE%A1%E7%90%86%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BAI%E6%B4%BB%E7%94%A8%E8%A1%93/issue-10_%E6%B4%BB%E7%94%A8%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E8%AA%BF%E6%9F%BB/04_%E7%B5%82%E7%B5%90/Closing%E6%B7%B1%E6%8E%98%E3%82%8A.md)
 
 - **プロジェクト振り返り（KPT等）**: 良かった点、悪かった点を言語化し、組織のナレッジとして残す。
 - **成果物・ドキュメントの整理・引き継ぎ**: 納品物の整備や保守フェーズへの移行手続き。
