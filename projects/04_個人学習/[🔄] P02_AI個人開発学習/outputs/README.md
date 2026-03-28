@@ -1,6 +1,6 @@
 # outputs｜P02 最終成果物
 
-↑ Project: [P02_AI個人開発学習](../README.md)
+↑ Project: [[🔄] P02_AI個人開発学習](../README.md)
 
 ---
 

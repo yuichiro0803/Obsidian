@@ -1,7 +1,7 @@
 # Issue #4｜LTスライド
 
 🔗 [GitHub Issue #4](https://github.com/yuichiro0803/Obsidian/issues/4)
-↑ Project: [P02_AI個人開発学習](../README.md)
+↑ Project: [[🔄] P02_AI個人開発学習](../README.md)
 
 ---
 

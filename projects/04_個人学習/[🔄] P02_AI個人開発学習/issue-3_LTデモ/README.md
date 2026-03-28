@@ -1,7 +1,7 @@
 # Issue #3｜LTデモシナリオ
 
 🔗 [GitHub Issue #3](https://github.com/yuichiro0803/Obsidian/issues/3)
-↑ Project: [P02_AI個人開発学習](../README.md)
+↑ Project: [[🔄] P02_AI個人開発学習](../README.md)
 
 ---
 

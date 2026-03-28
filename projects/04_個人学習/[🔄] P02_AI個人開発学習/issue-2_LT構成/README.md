@@ -1,7 +1,7 @@
 # Issue #2｜LT構成案
 
 🔗 [GitHub Issue #2](https://github.com/yuichiro0803/Obsidian/issues/2)
-↑ Project: [P02_AI個人開発学習](../README.md)
+↑ Project: [[🔄] P02_AI個人開発学習](../README.md)
 
 ---
 
