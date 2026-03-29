@@ -32,7 +32,10 @@ graph TD
     Start([連携要件の発生]) --> Q1{データ量は膨大か？<br>数万〜数千万件規模/一括ロード}
     Q1 -- Yes --> A1[Bulk API<br>※非同期一括処理]
     Q1 -- No --> Q2{状態変化を即座に検知する<br>イベント駆動型の要件か？}
-    Q2 -- Yes --> A2[Streaming API<br>※ポーリング不要・Push通信]
+    Q2 -- Yes --> Q_Stream{イベントの性質は？}
+    Q_Stream -- レコードの変更を<br>そのまま同期したい --> S1[CDC<br>変更データキャプチャ]
+    Q_Stream -- 独自のビジネス<br>イベントを通知したい --> S2[Platform Events]
+    Q_Stream -- 特定のSOQL条件の<br>変更だけ拾いたい --> S3[PushTopic<br>※レガシー/非推奨]
     Q2 -- No --> Q3{結果を即座に受け取る<br>同期的レスポンスが必要か？}
     Q3 -- Yes --> Q4{連携先システム制約上<br>WSDLとXMLが必須か？}
     Q4 -- Yes --> A3[SOAP API]
@@ -42,8 +45,10 @@ graph TD
 
     classDef apiFill fill:#2b5e8a,stroke:#fff,stroke-width:2px,color:#fff;
     classDef caution fill:#fff3cd,stroke:#856404,stroke-width:2px,color:#856404;
-    class A1,A2,A3,A4 apiFill;
-    class A5 caution;
+    classDef stream fill:#28a745,stroke:#fff,stroke-width:2px,color:#fff;
+    class A1,A3,A4 apiFill;
+    class S1,S2 stream;
+    class A5,S3 caution;
 ```
 
 ## 各APIの選定基準と理由
@@ -68,6 +73,14 @@ Streaming APIの採用を決定した後は、要件に応じて以下の3つの
 3. **プッシュトピック (PushTopic)**
    - **用途**: 特定のSOQL条件に合致するレコード変更のみを監視して通知したい場合。
    - **特徴**: Streaming APIにおける旧来の手法。現在は柔軟性や機能面で上位互換となる**「CDC」や「Platform Events」の利用が推奨**されているため、レガシーシステム起因の制約がない限り新規採用は避けるべき。
+
+#### 📊 実現案の比較表
+| 比較観点 | CDC (変更データキャプチャ) | Platform Events | PushTopic |
+| :--- | :--- | :--- | :--- |
+| **主な用途** | データ同期・データベースのレプリケーション | 汎用的なビジネスプロセスのイベント通知 | 条件付き（SOQL）のデータ変更通知 |
+| **イベントスキーマ（ペイロード）** | 対象オブジェクトの項目に基づいて**自動生成** (変更差分のみを保持) | カスタム要件に合わせて**独自・柔軟に定義** | SOQLクエリの内容に依存 |
+| **設定・実装難易度** | **低**: 数クリックの設定で利用開始可能 | **中〜高**: ペイロード設計やApexからの発行処理等が必要 | 中: クエリ作成とトピック登録が必要 |
+| **推奨度と将来性** | **高**（データ同期要件時のFirst Choice） | **高**（汎用的な事象通知要件時のFirst Choice） | **低**（既存レガシー対応以外では非推奨） |
 
 ### 3. 【SOAP API】を選ぶべきケース
 - **主な要件**: 古い基幹システム（ERP/レガシーシステム）との連携、強固な型保証が必要なエンタープライズ統合。
